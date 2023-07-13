@@ -10,18 +10,22 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
+    max-height: 49px;
     z-index: 1;
 }
 
 .header a {
     text-decoration: none;
-    color: rgb(200, 193, 185);
+    color: rgb(194, 190, 186);
+    font-weight: bolder;
 }
 
 .header .logo {
     float: left;
     font-size: 25px;
     padding: 10px 20px;
+    max-height: 49px;
+    box-sizing: border-box;
     font-weight: bold;
     font-style: italic;
     color: aliceblue;
@@ -43,6 +47,7 @@ body {
 
 .header ul a:hover {
     background-color: rgb(65, 65, 65);
+    color: white;
 }
 
 .header .menu {
@@ -120,33 +125,24 @@ body {
         float: left;
     }
     .header li a{
-        padding: 20px 50px;
+        padding: 15px 50px;
        
     }
     .header .menu{
         clear: none;
         float: right;
         max-height: 48px;
-        padding-bottom: 10px;
+        box-sizing: border-box;
     }
 
     .header .menu-icon{
         display: none;
-    }
-
-    /* .header ul {
-        list-style: none;
-        padding: 10px 0;
-        margin: 0;
-        overflow: hidden;
-        background-color: rgb(32, 32, 32);
-    } */
-    
+    }    
 }
 
 
 p {
-    margin: 10vh 15vw;
+    margin: 10vh 20vw;
     color: aliceblue;
     font-size: 20px;
 }
