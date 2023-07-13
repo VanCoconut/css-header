@@ -1,0 +1,152 @@
+body {
+    background-color: rgb(22, 22, 22);
+    margin: 0;
+}
+
+.header {
+    background-color: rgb(32, 32, 32);
+    /* Safari */
+    position: -webkit-sticky;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.header a {
+    text-decoration: none;
+    color: rgb(200, 193, 185);
+}
+
+.header .logo {
+    float: left;
+    font-size: 25px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-style: italic;
+    color: aliceblue;
+
+}
+
+.header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-color: rgb(32, 32, 32);
+}
+
+.header ul a {
+    display: block;
+    padding: 15px 20px;
+}
+
+.header ul a:hover {
+    background-color: rgb(65, 65, 65);
+}
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .3s ease-out;
+}
+
+.header .menu-icon {
+    float: right;
+    padding: 23px 15px;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.header .menu-icon .nav-icon {
+    background-color: greenyellow;
+    display: block;
+    width: 20px;
+    height: 3px;
+    position: relative;
+    transition: background-color .4s ease-out;
+}
+
+.header .menu-icon .nav-icon::before,
+.header .menu-icon .nav-icon::after {
+    background-color: greenyellow;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .4s ease-out;
+
+}
+
+
+.header .menu-icon .nav-icon::before {
+    top: 6px;   
+}
+
+.header .menu-icon .nav-icon::after {
+    top: -6px;   
+}
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked ~  .menu{
+    max-height: 240px;
+}
+
+
+.header .menu-btn:checked ~  .menu-icon .nav-icon{
+    background-color: transparent;
+    
+}
+.header .menu-btn:checked ~  .menu-icon .nav-icon::before{
+    transform: rotate(45deg);
+    top: 0;
+  
+    
+}
+.header .menu-btn:checked ~  .menu-icon .nav-icon::after{
+    transform: rotate(-45deg);
+    top: 0;
+    
+    
+}
+
+@media  (min-width: 48em) {
+    .header li{
+        float: left;
+    }
+    .header li a{
+        padding: 20px 50px;
+       
+    }
+    .header .menu{
+        clear: none;
+        float: right;
+        max-height: 48px;
+        padding-bottom: 10px;
+    }
+
+    .header .menu-icon{
+        display: none;
+    }
+
+    /* .header ul {
+        list-style: none;
+        padding: 10px 0;
+        margin: 0;
+        overflow: hidden;
+        background-color: rgb(32, 32, 32);
+    } */
+    
+}
+
+
+p {
+    margin: 10vh 15vw;
+    color: aliceblue;
+    font-size: 20px;
+}
